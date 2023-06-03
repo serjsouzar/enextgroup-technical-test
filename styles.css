@@ -63,6 +63,7 @@ body {
   align-items: center;
   justify-content: space-around;
   width: 79%;
+  flex-wrap: wrap;
 }
 
 
@@ -257,4 +258,26 @@ body {
   background-color: #e44104;
   color: #fff;
   cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  .header-input {
+    display: none;
+  }
+
+  .potions-container {
+    height: 100vh
+  }
+
+  .potion-title {
+    justify-content: center;
+  }
+
+  .potions {
+    width: 500px;
+    justify-content: center;
+    gap: 50px;
+  }
+
+
 }
