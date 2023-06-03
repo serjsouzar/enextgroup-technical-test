@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css"/>
-  <title>ENextGroup Test</title>
-</head>
-<body>
-  <div id="fade" class="hide"></div>
-  <div class="header">
-    <header>
-      <div><h1>Merlin's Potions</h1></div>
-      <div class="header-input"><input type="search"/></div>
-      <div><p>Bag</p></div>
-    </header>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo&family=Old+Standard+TT:ital@1&family=Oswald:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>ENextGroup Test</title>
+  </head>
+  <body>
+    <div id="fade" class="hide"></div>
+    <div class="header">
+      <header>
+        <div class="header-title">
+          <div class="title-page-name">
+          <h1 id="merlin">Merlin's</h1>
+          <h1 id="merlins-potion">Potions</h1>
+          </div>
+          <div class="subtitle-page">
+            <h3>── Fine potions since 1026 ──</h3>
+          </div>
+        </div>
+        <div class="header-input">
+          <img src="assets/search.png" />
+          <input type="search" placeholder="Search our stock"/>
+        </div>
+        <div><p>Bag</p></div>
+      </header>
+    </div>
 
-  <div class="potions-container">
-    <div class="potion-title">
-      <h2>Potions</h2>
-      <div></div>
-    </div>
-  
-    <div class="potions">
+    <div class="potions-container">
+      <div class="potion-title">
+        <h2>Potions</h2>
+        <div></div>
+      </div>
+
+      <div class="potions"></div>
     </div>
 
-    
-  </div>
-  
-  <div id="modal" class="hide">
-    <div class="modal-header">
-      <button id="close-modal">X</button>
-    </div>
-    <div class="modal-body">
-      <div class="modal-body-info">
-        <div class="ingredients-info"><h3>Ingredients:</h3></div>
-        <div class="cart-button"><button>ADD TO CART</button></div>
+    <div id="modal" class="hide">
+      <div class="modal-header">
+        <button id="close-modal">X</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body-info">
+          <div class="ingredients-info"><h3>Ingredients:</h3></div>
+          <div class="cart-button"><button>ADD TO CART</button></div>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="scripts.js"></script>
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>
