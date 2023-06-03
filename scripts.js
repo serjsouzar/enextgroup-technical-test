@@ -99,4 +99,26 @@ function fetchingLocalJson() {
     });
 }
 
+const input = document.getElementById("search")
+let timer 
+
+function SearchBar(){
+
+  const potion =  document.querySelectorAll(".potion-div")
+
+  for(let i=0; i<potion.length; i++){
+    if(potion[i].innerText.toLowerCase().includes(input.value.toLowerCase())){
+      potion[i].classList.remove("hidden")
+    }else{
+      potion[i].classList.add("hidden")
+    }
+  }
+}
+
+input.addEventListener("keyup", function(){
+  clearTimeout(timer)
+  timer = setTimeout(SearchBar, 1000)
+})
+
 fetchingLocalJson();
+SearchBar()
