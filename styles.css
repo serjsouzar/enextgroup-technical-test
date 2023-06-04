@@ -6,13 +6,48 @@
 body {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 
 .header-title {
   display: flex;
   flex-direction: column;
   gap: 2px
+}
+
+.header-cart-area {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+}
+
+#free-ship-msg {
+  font-family: Old Standard TT;
+  text-align: center;
+  color: #e44104
+}
+
+#free-ship-msg h2 {
+  padding-bottom: 3px;
+}
+
+.cauldron-cart {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.cauldron-cart p{
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(124, 124, 124);
+}
+
+#bag-cart {
+  padding-top: 2px;
+  padding-left: 7px;
+  color: #e44104;
 }
 
 .title-page-name {
@@ -69,7 +104,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 79%;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -109,7 +144,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
+  height: 30%;
   padding-top: 60px;
   gap: 50px
 }
@@ -207,7 +242,7 @@ body {
   z-index: 10;
   position: relative;
   left: 50%;
-  bottom: 50%;
+  bottom: 35%;
   transform: translateX(-50%);
 }
 
@@ -284,6 +319,12 @@ body {
 
 .hidden {
   display: none;
+}
+
+.footer-area {
+  width: 100%;
+  height: 30%;
+  background-color:rgb(230, 229, 229);;
 }
 
 @media (max-width: 1080px) {
