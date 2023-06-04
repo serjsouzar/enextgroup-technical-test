@@ -110,7 +110,8 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 50vh;
-  padding-top: 20px;
+  padding-top: 60px;
+  gap: 50px
 }
 
 .potions-container h2 {
@@ -121,12 +122,12 @@ body {
 .potion-title {
   display: flex;
   justify-content: space-between;
-  width: 880px;
+  width: 940px;
 }
 
 .potNameAndPrice {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -154,8 +155,8 @@ body {
 }
 
 .potions img {
-  width: 150px;
-  height: 150px;
+  width: 190px;
+  height: 190px;
 }
 
 .potion-div {
@@ -178,7 +179,7 @@ body {
 
 .modal-body {
   width: 660px;
-  height: 480px;
+  height: 410px;
   display: flex;
   justify-content: space-around;
   flex-direction: row-reverse;
@@ -230,9 +231,9 @@ body {
   flex-direction: column;
 }
 
-.modal-body-info h2 {
+.modal-title-name {
   width: 250px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .ingredients-info h3 {
@@ -269,12 +270,16 @@ body {
 }
 
 .modal-body-info h3 {
-  padding-top: 15px;
   width: 60px;
 }
 
 .price-info{
-  order: 1
+  order: 1;
+  padding-top: 15px;
+}
+
+.price-info h3 {
+  color: #e44104;
 }
 
 .hidden {

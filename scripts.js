@@ -10,7 +10,6 @@ const cartBag = document.querySelector("#bag-cart");
 const addCartBtn = document.querySelector("#modal-add-card-button");
 const priceInfo = document.querySelector(".price-info")
 
-let idCount;
 
 const toggleModal = () => {
   modal.classList.toggle("hide");
@@ -76,8 +75,9 @@ function fetchingLocalJson() {
           ingredients.innerHTML = `${potion.ingredients
             .map((i) => `<li>${i}</li>`)
             .join("")}`;
-          priceInfoText.textContent = `Price:$${potion.price}`;
+          priceInfoText.textContent = `\n$${potion.price}`;
          
+          titleName.classList.add("modal-title-name")
                
           ingredientsInfo.appendChild(ingredients);
           modalBody.appendChild(potionImageModalClone);
