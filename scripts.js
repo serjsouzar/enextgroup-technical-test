@@ -8,6 +8,7 @@ const ingredientsInfo = document.querySelector(".ingredients-info");
 const modalBtn = document.querySelector(".cart-button");
 const cartBag = document.querySelector("#bag-cart");
 const addCartBtn = document.querySelector("#modal-add-card-button");
+const priceInfo = document.querySelector(".price-info")
 
 let idCount;
 
@@ -52,10 +53,12 @@ function fetchingLocalJson() {
         let potionImageModalClone;
         let titleName = document.createElement("h2");
         let ingredients = document.createElement("ul");
+        let priceInfoText = document.createElement("h3")
 
         const onOpenModal = () => {
           console.clear();
           modalBodyInfo.appendChild(modalBtn);
+          modalBodyInfo.appendChild(priceInfoText)
           if (potionDiv.click) {
             potionDiv.classList.add("potion-div-modal");
             const potionModal = document.querySelector(".potion-div-modal");
@@ -73,11 +76,14 @@ function fetchingLocalJson() {
           ingredients.innerHTML = `${potion.ingredients
             .map((i) => `<li>${i}</li>`)
             .join("")}`;
-
+          priceInfoText.textContent = `Price:$${potion.price}`;
+         
+               
           ingredientsInfo.appendChild(ingredients);
           modalBody.appendChild(potionImageModalClone);
           modalBodyInfo.appendChild(titleName);
           modalBodyInfo.appendChild(ingredientsInfo);
+          priceInfo.appendChild(priceInfoText)
         };
 
         const onCloseModal = () => {
@@ -87,6 +93,7 @@ function fetchingLocalJson() {
           modalBodyInfo.removeChild(titleName);
           ingredientsInfo.removeChild(ingredients);
           modalBodyInfo.removeChild(ingredientsInfo);
+          priceInfo.removeChild(priceInfoText);
           const potionModal = document.querySelector(".potion-div-modal");
           for (const child of potionModal.children) {
             child.classList.remove("potion-div-modal-child");

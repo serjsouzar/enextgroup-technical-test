@@ -253,7 +253,7 @@ body {
 .cart-button {
   display: flex;
   flex-direction: column;
-  order: 1;
+  order: 2;
   width: 120px;
   padding-top: 15px;
 }
@@ -266,6 +266,15 @@ body {
   background-color: #e44104;
   color: #fff;
   cursor: pointer;
+}
+
+.modal-body-info h3 {
+  padding-top: 15px;
+  width: 60px;
+}
+
+.price-info{
+  order: 1
 }
 
 .hidden {
