@@ -3,9 +3,11 @@ const fade = document.querySelector("#fade");
 const closeModal = document.querySelector("#close-modal");
 const modal = document.querySelector("#modal");
 const modalBody = document.querySelector(".modal-body");
-const modalBodyInfo = document.querySelector(".modal-body-info")
-const ingredientsInfo = document.querySelector(".ingredients-info")
-const modalBtn = document.querySelector(".cart-button")
+const modalBodyInfo = document.querySelector(".modal-body-info");
+const ingredientsInfo = document.querySelector(".ingredients-info");
+const modalBtn = document.querySelector(".cart-button");
+const cartBag = document.querySelector("#bag-cart");
+const addCartBtn = document.querySelector("#modal-add-card-button");
 
 let idCount;
 
@@ -47,13 +49,13 @@ function fetchingLocalJson() {
 
         potionDiv.classList.add("potion-div");
 
-        let potionImageModalClone
-        let titleName = document.createElement("h2")
-        let ingredients = document.createElement("ul")
+        let potionImageModalClone;
+        let titleName = document.createElement("h2");
+        let ingredients = document.createElement("ul");
 
         const onOpenModal = () => {
-          console.clear()
-          modalBodyInfo.appendChild(modalBtn)
+          console.clear();
+          modalBodyInfo.appendChild(modalBtn);
           if (potionDiv.click) {
             potionDiv.classList.add("potion-div-modal");
             const potionModal = document.querySelector(".potion-div-modal");
@@ -61,29 +63,30 @@ function fetchingLocalJson() {
               child.classList.add("potion-div-modal-child");
             }
           }
-          const potionImageModal = document.querySelector(".potion-div-modal-child")
-          potionImageModalClone = potionImageModal.cloneNode()
-         
-          
-          titleName.textContent = `${potion.name}`
-          ingredients.innerHTML = `${potion.ingredients.map(i => 
-            `<li>${i}</li>`
-            ).join("")
-          }`
-          
-          ingredientsInfo.appendChild(ingredients)
-          modalBody.appendChild(potionImageModalClone)
-          modalBodyInfo.appendChild(titleName)
-          modalBodyInfo.appendChild(ingredientsInfo)
+
+          const potionImageModal = document.querySelector(
+            ".potion-div-modal-child"
+          );
+          potionImageModalClone = potionImageModal.cloneNode();
+
+          titleName.textContent = `${potion.name}`;
+          ingredients.innerHTML = `${potion.ingredients
+            .map((i) => `<li>${i}</li>`)
+            .join("")}`;
+
+          ingredientsInfo.appendChild(ingredients);
+          modalBody.appendChild(potionImageModalClone);
+          modalBodyInfo.appendChild(titleName);
+          modalBodyInfo.appendChild(ingredientsInfo);
         };
 
         const onCloseModal = () => {
-          console.clear()
-          modalBody.removeChild(potionImageModalClone)
-          modalBodyInfo.removeChild(modalBtn)
-          modalBodyInfo.removeChild(titleName)
-          ingredientsInfo.removeChild(ingredients)
-          modalBodyInfo.removeChild(ingredientsInfo)
+          console.clear();
+          modalBody.removeChild(potionImageModalClone);
+          modalBodyInfo.removeChild(modalBtn);
+          modalBodyInfo.removeChild(titleName);
+          ingredientsInfo.removeChild(ingredients);
+          modalBodyInfo.removeChild(ingredientsInfo);
           const potionModal = document.querySelector(".potion-div-modal");
           for (const child of potionModal.children) {
             child.classList.remove("potion-div-modal-child");
@@ -95,30 +98,40 @@ function fetchingLocalJson() {
         potionDiv.addEventListener("click", onOpenModal);
         fade.addEventListener("click", onCloseModal);
         closeModal.addEventListener("click", onCloseModal);
+        
       });
     });
 }
 
-const input = document.getElementById("search")
-let timer 
+const input = document.getElementById("search");
+let timer;
 
-function SearchBar(){
+function SearchBar() {
+  const potion = document.querySelectorAll(".potion-div");
 
-  const potion =  document.querySelectorAll(".potion-div")
-
-  for(let i=0; i<potion.length; i++){
-    if(potion[i].innerText.toLowerCase().includes(input.value.toLowerCase())){
-      potion[i].classList.remove("hidden")
-    }else{
-      potion[i].classList.add("hidden")
+  for (let i = 0; i < potion.length; i++) {
+    if (potion[i].innerText.toLowerCase().includes(input.value.toLowerCase())) {
+      potion[i].classList.remove("hidden");
+    } else {
+      potion[i].classList.add("hidden");
     }
   }
 }
 
-input.addEventListener("keyup", function(){
-  clearTimeout(timer)
-  timer = setTimeout(SearchBar, 1000)
-})
+input.addEventListener("keyup", function () {
+  clearTimeout(timer);
+  timer = setTimeout(SearchBar, 1000);
+});
+
+let cartIncrement = 0
+
+function doSomething() {
+  cartIncrement === 0 ? cartIncrement = 1 : cartIncrement++
+  cartBag.textContent = cartIncrement
+}
 
 fetchingLocalJson();
-SearchBar()
+SearchBar();
+
+
+
