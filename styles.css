@@ -94,6 +94,7 @@ body {
   justify-content: space-evenly;
   height: 80px;
   align-items: center;
+  max-width: 848px;
 }
 
 #nav-options li {
@@ -102,7 +103,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  width: 100px;
+  width: 122px;
   text-align: left;
   list-style: none;
   cursor: pointer;
@@ -111,16 +112,13 @@ body {
   color: azure;
   letter-spacing: 1px;
   transition: all ease 0.2s;
+  padding-top: 9px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 #nav-options li:hover {
   background-color: #382347;
-}
-
-#nav-options li p {
-  padding-top: 3px;
-  font-size: 18px;
-  cursor: pointer;
 }
 
 #nav-sign {
@@ -414,8 +412,37 @@ body {
 
 .footer-area {
   width: 100%;
-  height: 30%;
+  height: 40%;
   background-color: rgb(230, 229, 229);
+}
+
+.footer-media-infos {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-info {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 340px;
+  padding: 57px;
+  padding-bottom: 28px;
+  font-family: Oswald;
+  color: rgb(228, 65, 4);
+}
+
+.social-medias {
+  display: flex;
+  max-width: 350px;
+  padding-left: 17px;
+  justify-content: space-evenly;
+}
+
+.social-medias img {
+  width: 50px;
+  height: 50px;
 }
 
 @media (max-width: 1050px) {

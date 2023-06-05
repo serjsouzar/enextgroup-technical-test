@@ -3,7 +3,7 @@
     "1": {
       "id": 1,
       "name": "Aging Potion",
-      "image": "./products/aging-potion.png",
+      "image": "./assets/products/aging-potion.png",
       "price": 29.99,
       "effect": "Causes the drinker to advance in age",
       "ingredients": [
@@ -18,7 +18,7 @@
     "2": {
       "id": 2,
       "name": "Bulgeye Potion",
-      "image": "./products/bulgeye-potion.png",
+      "image": "./assets/products/bulgeye-potion.png",
       "price": 19.99,
       "effect": "It affects one's eyes, causing them to swell",
       "ingredients": [
@@ -29,7 +29,7 @@
     "3": {
       "id": 3,
       "name": "Dragon Tonic",
-      "image": "./products/dragon-tonic.png",
+      "image": "./assets/products/dragon-tonic.png",
       "price": 64.99,
       "effect": "A tonic used to cure sick dragons",
       "ingredients": [
@@ -41,7 +41,7 @@
     "4": {
       "id": 4,
       "name": "Love Potion",
-      "image": "./products/love-potion.png",
+      "image": "./assets/products/love-potion.png",
       "price": 29.99,
       "effect": "The one who drinks it falls deeply in love with the first person they see",
       "ingredients": [
@@ -54,7 +54,7 @@
     "5": {
       "id": 5,
       "name": "Polyjuice Potion",
-      "image": "./products/polyjuice-potion.png",
+      "image": "./assets/products/polyjuice-potion.png",
       "price": 99.99,
       "effect": "Allows the drinker to assume the form of someone else",
       "ingredients": [
@@ -69,7 +69,7 @@
     "6": {
       "id": 6,
       "name": "Sleeping Draught",
-      "image": "./products/sleeping-draught.png",
+      "image": "./assets/products/sleeping-draught.png",
       "price": 29.99,
       "effect": "Causes the drinker to fall almost instantaneously into a deep but temporary sleep",
       "ingredients": [
