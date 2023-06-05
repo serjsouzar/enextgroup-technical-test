@@ -11,6 +11,8 @@ body {
 .header-title {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2px;
 }
 
@@ -54,13 +56,14 @@ body {
   display: flex;
   justify-content: end;
   width: 329px;
+  justify-content: center;
   gap: 5px;
 }
 
 .subtitle-page {
   font-family: Old Standard TT;
   font-style: italic;
-  font-size: 23px;
+  font-size: 18px;
   color: #523468;
 }
 
@@ -68,35 +71,91 @@ body {
   font-family: Oswald;
   font-weight: 400px;
   letter-spacing: 2px;
-  font-size: 50px;
+  font-size: 40px;
   color: #e44104;
 }
 
 #merlins-potion {
   font-family: Oswald;
   font-weight: lighter;
-  font-size: 50px;
+  font-size: 40px;
   color: #e44104;
 }
 
 .nav-div {
   width: 100%;
-  height: 90px;
   background-color: #523468;
+  justify-content: space-around;
+  display: flex;
 }
 
-.nav-div nav {
+#nav-options {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.nav-div ul {
-  display: flex;
+  justify-content: space-evenly;
   height: 80px;
   align-items: center;
-  padding-left: 30px;
-  gap: 25px;
+}
+
+#nav-options li {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 100px;
+  text-align: left;
+  list-style: none;
+  cursor: pointer;
+  font-family: Old Standard TT;
+  font-weight: bold;
+  color: azure;
+  letter-spacing: 1px;
+  transition: all ease 0.2s;
+}
+
+#nav-options li:hover {
+  background-color: #382347;
+}
+
+#nav-options li p {
+  padding-top: 3px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#nav-sign {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 250px;
+  font-family: Old Standard TT;
+  font-weight: bold;
+  color: azure;
+  letter-spacing: 1px;
+  transition: all ease 0.2s;
+  list-style: none;
+}
+
+#sign-in, #sign-up {
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+#sign-in:hover {
+  background-color: #382347;
+  cursor: pointer;
+}
+
+#sign-up:hover {
+  background-color: #382347;
+  cursor: pointer;
+}
+
+#or {
+  color: #ccc;
 }
 
 #fade,
@@ -111,7 +170,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .header header {
@@ -359,7 +418,7 @@ body {
   background-color: rgb(230, 229, 229);
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 780px) {
   .header-input {
     display: none;
   }
@@ -377,4 +436,18 @@ body {
     justify-content: center;
     gap: 50px;
   }
+
+  #free-ship-msg{
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  #free-ship-msg h2, h3 {
+    width: 225px;
+    font-size: 30px;
+  }
+
 }
