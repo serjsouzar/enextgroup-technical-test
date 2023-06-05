@@ -124,7 +124,7 @@ body {
 #nav-sign {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: right;
   width: 250px;
   font-family: Old Standard TT;
   font-weight: bold;
@@ -181,7 +181,7 @@ body {
 
 .header-input {
   height: 30px;
-  width: 375px;
+  width: 323px;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -216,6 +216,7 @@ body {
   align-items: center;
   height: 30%;
   padding-top: 60px;
+  padding-bottom: 30px;
   gap: 50px;
 }
 
@@ -412,13 +413,14 @@ body {
 
 .footer-area {
   width: 100%;
-  height: 40%;
+  height: 300px;
   background-color: rgb(230, 229, 229);
 }
 
 .footer-media-infos {
   display: flex;
   flex-direction: column;
+  padding-top: 25px;
 }
 
 .company-info {
@@ -426,17 +428,27 @@ body {
   justify-content: left;
   gap: 20px;
   flex-wrap: wrap;
-  max-width: 340px;
+  max-width: 444px;
   padding: 57px;
-  padding-bottom: 28px;
-  font-family: Oswald;
+  padding-bottom: 20px;
+  font-family: sans-serif;
   color: rgb(228, 65, 4);
+}
+
+.copyright {
+  display: flex;
+  max-width: 359px;
+  padding-left: 18px;
+  justify-content: space-around;
+  font-family: sans-serif;
+  color: #757474;
 }
 
 .social-medias {
   display: flex;
   max-width: 350px;
   padding-left: 17px;
+  padding-bottom: 25px;
   justify-content: space-evenly;
 }
 
