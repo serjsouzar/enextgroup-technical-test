@@ -418,6 +418,24 @@ body {
   background-color: rgb(230, 229, 229);
 }
 
+@media (max-width: 1050px) {
+  #free-ship-msg {
+    display: flex;
+    align-items: center;
+  }
+
+  #free-ship-msg h2 {
+    width: 200px;
+    text-align: end;
+    font-size: large;
+  }
+
+  #free-ship-msg h3 {
+    width: 160px;
+  }
+
+}
+
 @media (max-width: 780px) {
   .header-input {
     display: none;
