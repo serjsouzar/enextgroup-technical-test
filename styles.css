@@ -11,7 +11,7 @@ body {
 .header-title {
   display: flex;
   flex-direction: column;
-  gap: 2px
+  gap: 2px;
 }
 
 .header-cart-area {
@@ -23,7 +23,7 @@ body {
 #free-ship-msg {
   font-family: Old Standard TT;
   text-align: center;
-  color: #e44104
+  color: #e44104;
 }
 
 #free-ship-msg h2 {
@@ -37,7 +37,7 @@ body {
   justify-content: space-between;
 }
 
-.cauldron-cart p{
+.cauldron-cart p {
   font-family: sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -85,6 +85,20 @@ body {
   background-color: #523468;
 }
 
+.nav-div nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-div ul {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  padding-left: 30px;
+  gap: 25px;
+}
+
 #fade,
 #modal {
   transition: 0.5s;
@@ -108,9 +122,8 @@ body {
   flex-wrap: wrap;
 }
 
-
 .header-input {
-  height:30px;
+  height: 30px;
   width: 375px;
   display: flex;
   flex-direction: row;
@@ -125,7 +138,7 @@ body {
 
 .header-input input {
   width: 350px;
-  height:50px;
+  height: 50px;
   border: none;
   font-size: 18px;
   cursor: pointer;
@@ -146,7 +159,7 @@ body {
   align-items: center;
   height: 30%;
   padding-top: 60px;
-  gap: 50px
+  gap: 50px;
 }
 
 .potions-container h2 {
@@ -205,11 +218,17 @@ body {
 
 .modal-header {
   display: flex;
-  flex-direction: row-reverse;
-  width: 480px;
-  padding: 10px;
-  position: relative;
-  left: 90px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#close-modal {
+  border: none;
+  background-color: transparent;
+  padding: 8px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .modal-body {
@@ -234,8 +253,8 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: 2px solid red;
-  width: 700px;
+  border-radius: 10px;
+  width: 680px;
   height: 470px;
   max-width: 80%;
   background-color: #fff;
@@ -268,7 +287,11 @@ body {
 
 .modal-title-name {
   width: 250px;
-  padding-bottom: 20px;
+  padding-bottom: 8px;
+}
+
+.use-effects-info h3 {
+  padding-bottom: 12px;
 }
 
 .ingredients-info h3 {
@@ -284,6 +307,11 @@ body {
 
 .ingredients-info ul li {
   list-style: none;
+}
+
+.use-effects-info {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .cart-button {
@@ -308,13 +336,17 @@ body {
   width: 60px;
 }
 
-.price-info{
+.price-info {
   order: 1;
   padding-top: 15px;
 }
 
 .price-info h3 {
   color: #e44104;
+}
+
+.price-info h2 {
+  font-size: 19px;
 }
 
 .hidden {
@@ -324,7 +356,7 @@ body {
 .footer-area {
   width: 100%;
   height: 30%;
-  background-color:rgb(230, 229, 229);;
+  background-color: rgb(230, 229, 229);
 }
 
 @media (max-width: 1080px) {
@@ -333,7 +365,7 @@ body {
   }
 
   .potions-container {
-    height: 70vh
+    height: 70vh;
   }
 
   .potion-title {
@@ -345,6 +377,4 @@ body {
     justify-content: center;
     gap: 50px;
   }
-
-
 }

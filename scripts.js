@@ -9,7 +9,7 @@ const modalBtn = document.querySelector(".cart-button");
 const cartBag = document.querySelector("#bag-cart");
 const addCartBtn = document.querySelector("#modal-add-card-button");
 const priceInfo = document.querySelector(".price-info")
-
+const useEffectsInfo = document.querySelector(".use-effects-info");
 
 const toggleModal = () => {
   modal.classList.toggle("hide");
@@ -53,6 +53,7 @@ function fetchingLocalJson() {
         let titleName = document.createElement("h2");
         let ingredients = document.createElement("ul");
         let priceInfoText = document.createElement("h3")
+        let useEffectsText = document.createElement("p")
 
         const onOpenModal = () => {
           console.clear();
@@ -76,24 +77,31 @@ function fetchingLocalJson() {
             .map((i) => `<li>${i}</li>`)
             .join("")}`;
           priceInfoText.textContent = `\n$${potion.price}`;
+          useEffectsText.textContent = `${potion.effect}`
          
           titleName.classList.add("modal-title-name")
-               
+          
+          useEffectsInfo.appendChild(useEffectsText)
           ingredientsInfo.appendChild(ingredients);
           modalBody.appendChild(potionImageModalClone);
           modalBodyInfo.appendChild(titleName);
+          modalBodyInfo.appendChild(useEffectsInfo)
           modalBodyInfo.appendChild(ingredientsInfo);
           priceInfo.appendChild(priceInfoText)
         };
 
         const onCloseModal = () => {
           console.clear();
+          useEffectsInfo.removeChild(useEffectsText)
           modalBody.removeChild(potionImageModalClone);
           modalBodyInfo.removeChild(modalBtn);
           modalBodyInfo.removeChild(titleName);
           ingredientsInfo.removeChild(ingredients);
           modalBodyInfo.removeChild(ingredientsInfo);
           priceInfo.removeChild(priceInfoText);
+          modalBodyInfo.removeChild(useEffectsInfo)
+          modalBodyInfo.removeChild(priceInfo)
+          
           const potionModal = document.querySelector(".potion-div-modal");
           for (const child of potionModal.children) {
             child.classList.remove("potion-div-modal-child");
