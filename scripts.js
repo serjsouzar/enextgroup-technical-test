@@ -92,15 +92,15 @@ function fetchingLocalJson() {
 
         const onCloseModal = () => {
           console.clear();
-          useEffectsInfo.removeChild(useEffectsText)
           modalBody.removeChild(potionImageModalClone);
+          useEffectsInfo.removeChild(useEffectsText)
           modalBodyInfo.removeChild(modalBtn);
           modalBodyInfo.removeChild(titleName);
           ingredientsInfo.removeChild(ingredients);
           modalBodyInfo.removeChild(ingredientsInfo);
           priceInfo.removeChild(priceInfoText);
           modalBodyInfo.removeChild(useEffectsInfo)
-          modalBodyInfo.removeChild(priceInfo)
+          //modalBodyInfo.removeChild(priceInfo)
           
           const potionModal = document.querySelector(".potion-div-modal");
           for (const child of potionModal.children) {
@@ -108,7 +108,7 @@ function fetchingLocalJson() {
           }
           potionDiv.classList.remove("potion-div-modal");
         };
-
+        
         potionDiv.addEventListener("click", toggleModal);
         potionDiv.addEventListener("click", onOpenModal);
         fade.addEventListener("click", onCloseModal);
