@@ -176,7 +176,6 @@ body {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 .header-input {
@@ -529,30 +528,52 @@ body {
 }
 
 @media (max-width: 780px) {
+  .header header {
+    flex-direction: row;
+  }
+
+  .subtitle-page h3 {
+    font-size: 16px;
+  }
+
+  #nav-options {
+    flex-direction: column;
+    height: auto;
+  }
+
   .header-input {
     display: none;
   }
 
+  .cauldron-cart {
+    flex-wrap: wrap;
+    width: 75px;
+    justify-content: space-evenly;
+  }
+
+  #bag-cart {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
   .potions-container {
+    display: block;
     height: 70vh;
   }
 
   .potion-title {
     justify-content: center;
+    max-width: 540px;
   }
 
   .potions {
     width: 500px;
     justify-content: center;
-    gap: 50px;
+    gap: none;
   }
 
   #free-ship-msg{
-    position: relative;
-    top: 200px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    display: none;
   }
 
   #free-ship-msg h2, h3 {
@@ -560,4 +581,29 @@ body {
     font-size: 30px;
   }
 
+  .company-info {
+    display: none;
+  }
+
+  .footer-area {
+    width: 534px;
+    padding-left: 0;
+    flex-wrap: wrap;
+    height: 299px;
+  }
+
+  .footer-media-infos {
+    order: 1;
+    width: 465px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .newsletter-container {
+    margin-bottom: 0;
+  }
+
+  #newsletter-area {
+    max-width: 346px;
+  }
 }
