@@ -140,7 +140,7 @@ input.addEventListener("keyup", function () {
 
 let cartIncrement = 0
 
-function doSomething() {
+function cartIncrementFunction() {
   cartIncrement === 0 ? cartIncrement = 1 : cartIncrement++
   cartBag.textContent = cartIncrement
 }
