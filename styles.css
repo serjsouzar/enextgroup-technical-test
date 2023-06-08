@@ -664,8 +664,32 @@ body {
   }
 
   #modal {
+    width: 90%;
+    height: 550px;
+  }
+
+  #modal img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .modal-header {
+    height: 22px;
+  }
+
+  .cart-button {
+    position: relative;
+    left: 104px;
+    bottom: 47px;
+  }
+
+  .modal-body {
     width: 100%;
-    left: 0;
+    height: 79vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   #bag-cart {
