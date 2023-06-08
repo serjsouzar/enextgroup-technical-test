@@ -674,8 +674,8 @@ body {
   }
 
   .potions-container {
-    display: block;
-    height: 70vh;
+    padding-top: 0;
+    padding-bottom: 62px;
   }
 
   .potion-title {
@@ -684,17 +684,21 @@ body {
   }
 
   .potions {
-    width: 100%;
-    justify-content: center;
-    gap: none;
+    width: 375px;
+    justify-content: space-evenly;
+    gap: 47px;
     padding: 0;
   }
 
   .potion-div img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
   }
 
+  .potNameAndPrice p {
+    font-size: 10px;
+  }
+  
   #free-ship-msg{
     display: none;
   }
