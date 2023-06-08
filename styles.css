@@ -248,6 +248,10 @@ body {
   width: 100%;
 }
 
+.header-cart-area{
+  width: auto;
+}
+
 .header-input {
   height: 30px;
   width: 323px;
@@ -609,15 +613,19 @@ body {
 
 @media (max-width: 780px) {
   .header {
-    width: 540px;
-    padding-left: 24px;
+    width: auto;
     justify-content: flex-end;
+    padding-top: 10px;
+  }
+
+  .title-page-name {
+    width: 231px;
   }
 
   .header header {
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 438px;
+    justify-content: end;
+    width: 100%;
   }
 
   .subtitle-page h3 {
@@ -626,7 +634,9 @@ body {
 
   .nav-div {
     background-color: #ccc;
-    width: 580px;
+    width: 100%;
+    position: relative;
+    bottom: 21px;
   }
 
   #nav-options {
@@ -653,6 +663,11 @@ body {
     justify-content: space-evenly;
   }
 
+  #modal {
+    width: 100%;
+    left: 0;
+  }
+
   #bag-cart {
     padding-top: 0;
     padding-left: 0;
@@ -665,13 +680,19 @@ body {
 
   .potion-title {
     justify-content: center;
-    max-width: 580px;
+    width: 100%
   }
 
   .potions {
-    width: 528px;
+    width: 100%;
     justify-content: center;
     gap: none;
+    padding: 0;
+  }
+
+  .potion-div img {
+    width: 80px;
+    height: 80px;
   }
 
   #free-ship-msg{
@@ -688,7 +709,7 @@ body {
   }
 
   .footer-area {
-    width: 580px;
+    width: 100%;
     padding-left: 0;
     flex-wrap: wrap;
     height: 299px;
@@ -715,13 +736,17 @@ body {
   }
   
   .hamburguer {
-    right: -10px;
-    bottom: 52px;
+    right: 56px;
+    bottom: 64px;
+    width: 30px;
+    z-index: 3;
   }
 
   .toggle-menu {
-    left: 30px;
-    height: 38px;
+    position: relative;
+    left: 0px;
+    height: 27px;
+    bottom: 76px;
   }
 
   #nav-sign {
@@ -741,6 +766,7 @@ body {
     width: 300px;
     height: 100%;
     padding-top: 65px;
+    z-index: 2;
   }
 
   #nav-options li,
@@ -751,19 +777,17 @@ body {
     box-shadow:  0 1px 0 rgba(255,255,255, 0.1) inset;
   }
 
-  .toggle-menu {
-    position: relative;
-    bottom: 69px;
-  }
-
   .mobile-freeship-msg {
     font-size: 18px;
     display: flex;
+    position: relative;
+    top: 9px;
     align-items: center;
-    width: 434px;
-    padding-left: 102px;
+    justify-content: center;
+    width: 100%;
     font-family: Old Standard TT;
     color: #555555;
+    z-index: 1;
   }
 
 }
