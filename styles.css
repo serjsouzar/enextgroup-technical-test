@@ -623,17 +623,23 @@ body {
   }
 
   .title-page-name {
-    width: 231px;
+    width: 240px;
+  }
+
+  #merlin, #merlins-potion {
+    font-size: 34px;
+  }
+
+  .subtitle-page h3 {
+    position: relative;
+    left: 15px;
+    font-size: 14px;
   }
 
   .header header {
     flex-direction: row;
     justify-content: end;
     width: 100%;
-  }
-
-  .subtitle-page h3 {
-    font-size: 16px;
   }
 
   .nav-div {
