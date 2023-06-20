@@ -623,7 +623,8 @@ body {
   }
 
   .title-page-name {
-    width: 240px;
+    width: 258px;
+    padding-bottom: 10px;
   }
 
   #merlin, #merlins-potion {
