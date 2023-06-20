@@ -566,7 +566,7 @@ body {
 #newsletter-submit{
   display: flex;
   justify-content: space-between;
-  max-width: 306px;
+  max-width: 320px;
 }
 
 #newsletter-submit input {
@@ -618,6 +618,10 @@ body {
     padding-top: 10px;
   }
 
+  .header-cart-area {
+    padding-right: 10px;
+  }
+
   .title-page-name {
     width: 231px;
   }
@@ -659,12 +663,21 @@ body {
 
   .cauldron-cart {
     flex-wrap: wrap;
-    width: 75px;
+    width: 53px;
     justify-content: space-evenly;
   }
 
+  .cauldron-cart img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cauldron-cart p {
+    font-size: 17px
+  }
+
   #modal {
-    width: 90%;
+    max-width: 90%;
     height: 550px;
   }
 
@@ -674,7 +687,7 @@ body {
   }
 
   .modal-header {
-    height: 22px;
+    height: 27px;
   }
 
   .cart-button {
@@ -684,7 +697,7 @@ body {
   }
 
   #close-modal {
-    padding: 20px;
+    padding: 5px;
   }
 
   .modal-body {
@@ -694,11 +707,22 @@ body {
     justify-content: space-around;
     flex-direction: column-reverse;
     align-items: center;
+    font-size: 13px;
+  }
+
+  .modal-title-name {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .modal-body-info h3 {
+    font-size: 23px;
   }
 
   #bag-cart {
     padding-top: 0;
     padding-left: 0;
+    margin-right: 6px;
   }
 
   .potions-container {
